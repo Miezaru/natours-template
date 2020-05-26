@@ -1,0 +1,59 @@
+/*==================*/
+/*      Button      */
+/*==================*/
+
+.btn {
+  &:link,
+  &:visited {
+    position: relative;
+    display: inline-block;
+    padding: $gap * 1.5 $gap * 4;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: $gap * 10;
+    transition: all 0.2s;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 $gap $gap * 2 rgba(#000, 0.2);
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 $gap/2 $gap rgba(#000, 0.2);
+  }
+
+  &::after {
+    content: '';
+    display: inline-block;
+    height: 100%; // width of the button, cos pseudo-elements is a child elements
+    width: 100%;
+    border-radius: $gap * 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+  }
+
+  &--white {
+    background-color: $color-white;
+    color: $color-gray-dark;
+
+    &::after {
+      background-color: $color-white;
+    }
+  }
+
+  &--animated {
+    animation: moveInBottom 0.5s ease-out 0.75s;
+    // animetion: [animation-name] | [animation-duration] | [animation-timing-function] | [animation-delay]
+    animation-fill-mode: backwards;
+  }
+}
