@@ -1,3 +1,13 @@
+/*====================*/
+/*     Typography     */
+/*====================*/
+
+$font-main: 'Lato', sans-serif;
+$font-header: 'Lato', sans-serif;
+$font-size: 62.5%;
+
+$default-font-size: 1.6rem;
+
 /*=====================*/
 /*        Colors       */
 /*=====================*/
@@ -6,18 +16,18 @@ $color-primary: #55c57a;
 $color-primary-light: #7ed56f;
 $color-primary-dark: #28b485;
 $color-gray-dark: #777;
+$color-gray-light: #f7f7f7;
 $color-white: #fff;
+$color-black: #000;
 
 /*====================*/
 /*        Sizes       */
 /*====================*/
 
-$lg: 1200px;
-$md: 992px;
-$sm: 768px;
-$xs: 576px;
-
-$gap: 10px;
+$lg: 120rem;
+$md: 99.2rem;
+$sm: 76.8rem;
+$xs: 57.6rem;
 
 /*===================*/
 /*        Grid       */

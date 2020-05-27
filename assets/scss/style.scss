@@ -3,15 +3,16 @@
 @import 'abstract/mixins-media';
 @import 'abstract/mixins';
 
-@import 'base/typography';
-@import 'base/common';
 @import 'base/animations';
+@import 'base/common';
 @import 'base/utilities';
+@import 'base/typography';
 
 @import 'components/button';
-
-@import 'pages/home';
+@import 'components/composition';
 
 @import 'layout/header';
 @import 'layout/grid';
 @import 'layout/footer';
+
+@import 'pages/home';

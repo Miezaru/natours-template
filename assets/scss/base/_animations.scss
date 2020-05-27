@@ -5,7 +5,7 @@
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-$gap * 10);
+    transform: translateX(-10rem);
   }
 
   /*
@@ -15,7 +15,7 @@
   */
 
   80% {
-    transform: translateX($gap);
+    transform: translateX(1rem);
   }
 
   100% {
@@ -27,11 +27,11 @@
 @keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translateX($gap * 10);
+    transform: translateX(10rem);
   }
 
   80% {
-    transform: translateX(-$gap);
+    transform: translateX(-1rem);
   }
 
   100% {
@@ -43,7 +43,7 @@
 @keyframes moveInBottom {
   0% {
     opacity: 0;
-    transform: translateY($gap * 3);
+    transform: translateY(3rem);
   }
 
   100% {
