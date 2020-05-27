@@ -3,8 +3,8 @@
 @import 'abstract/mixins-media';
 @import 'abstract/mixins';
 
-@import 'base/animations';
 @import 'base/common';
+@import 'base/animations';
 @import 'base/utilities';
 @import 'base/typography';
 
@@ -12,6 +12,8 @@
 @import 'components/composition';
 @import 'components/feature-box';
 @import 'components/card';
+@import 'components/story';
+@import 'components/bg-video';
 
 @import 'layout/header';
 @import 'layout/grid';
