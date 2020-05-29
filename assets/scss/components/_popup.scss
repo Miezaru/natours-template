@@ -9,6 +9,16 @@
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s;
+  -webkit-background-filter: blur(10px);
+  background-filter: blur(10px);
+
+  // feature query
+  @supports (-webkit-background-filter: blur(10px)) or
+    (background-filter: blur(10px)) {
+    -webkit-background-filter: blur(10px);
+    background-filter: blur(10px);
+    background-color: rgba($color-black, 0.3);
+  }
 
   &__content {
     @include absCenter;
@@ -28,6 +38,12 @@
   &__left {
     width: 33.333333%;
     display: table-cell;
+    vertical-align: middle;
+
+    @include respond(tab-port) {
+      width: 100%;
+      display: block;
+    }
   }
 
   &__right {
@@ -35,11 +51,30 @@
     display: table-cell;
     vertical-align: middle; //top, bottom
     padding: 3rem 5rem;
+
+    @include respond(tab-port) {
+      width: 100%;
+      display: block;
+    }
+
+    @include respond(phone) {
+      padding: 3rem 2rem;
+    }
   }
 
   &__img {
     display: block;
     width: 100%;
+
+    @include respond(tab-port) {
+      width: 50%;
+      float: left;
+      height: 28rem;
+    }
+
+    @include respond(phone) {
+      height: 20rem;
+    }
   }
 
   &__text {
@@ -52,6 +87,15 @@
 
     -moz-hyphens: auto;
     hyphens: auto;
+
+    @include respond(tab-port) {
+      column-count: 2;
+      column-gap: 1rem;
+    }
+
+    @include respond(phone) {
+      column-count: 1;
+    }
   }
 
   &:target {
